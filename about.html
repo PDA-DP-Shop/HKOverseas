@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | HKOverseas</title>
+    <link rel="stylesheet" href="home/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">HKOverseas<span class="dot">.com</span></a>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header (Hero) -->
+    <section class="page-header">
+        <div class="container text-center">
+            <div class="badge-pill fade-up">Our Story</div>
+            <h1 class="hero-title fade-up">Building Global <span class="highlight">Bridges</span></h1>
+            <p class="hero-desc mx-auto fade-up">Your Trusted Merchant Trading Partner for Seamless Import & Export.</p>
+        </div>
+    </section>
+
+    <!-- Who We Are (New White Theme) -->
+    <!-- Fully Who We Are Section -->
+    <section class="section-padding bg-white" style="margin: 10px;">
+        <div class="container">
+            <!-- 1. The Narrative -->
+            <div class="row align-center mb-5">
+                <div class="col-text reveal-text">
+                    <h4 class="sub-title">Our Story</h4>
+                    <h2 class="display-title">Orchestrating Global <br><span class="highlight">Trade & Logistics</span>
+                    </h2>
+                    <p class="lead-text">
+                        We are more than just exporters; we are your <strong>strategic sourcing partners</strong> in
+                        India.
+                    </p>
+                    <p class="body-text">
+                        As a dynamic <strong>Merchant Trading House</strong>, HKOverseas breaks the limitations of
+                        single-product sourcing. We orchestrate a precise network of top-tier manufacturers across
+                        Agriculture, Chemicals, and Textiles to deliver exactly what you need.
+                    </p>
+                    <p class="body-text">
+                        Whether you need a mixed container of spices or specialized industrial machinery, we handle the
+                        complexity of sourcing, quality control, and logistics—so you simply receive the best of India
+                        at your doorstep.
+                    </p>
+                </div>
+                <div class="col-image reveal-image">
+                    <div class="image-frame">
+                        <img src="assets/images/about_trust.webp" alt="Strategic Partnership" class="rounded-img">
+                        <div class="floating-badge">
+                            <i class="fas fa-globe"></i>
+                            <span>Global Shipping<br>Daily</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Vision & Mission -->
+            <div class="vision-mission-wrapper reveal-text">
+                <div class="vm-card">
+                    <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted partner for sourcing Indian products, creating a trade
+                        ecosystem defined by integrity and efficiency.</p>
+                </div>
+                <div class="vm-visual">
+                    <img src="assets/images/vision.webp" alt="Vision Abstract">
+                </div>
+                <div class="vm-card">
+                    <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To empower global businesses by providing high-quality goods, transparent logistics, and a
+                        seamless trading experience that fosters long-term growth.</p>
+                </div>
+            </div>
+
+            <!-- 3. The Founder -->
+            <div class="founder-section reveal-image">
+                <div class="founder-card">
+                    <div class="founder-img">
+                        <img src="assets/images/founder.webp" alt="Henil Kathiriya - Founder">
+                    </div>
+                    <div class="founder-content">
+                        <h3>Leadership</h3>
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p class="founder-message">
+                            "Trust is the hardest thing to earn and the easiest to lose. At HKOverseas, we treat every
+                            shipment as a promise kept. Whether you are a startup or a multinational, we are committed
+                            to fueling your growth."
+                        </p>
+                        <div class="founder-info">
+                            <h4>Henil Kathiriya</h4>
+                            <span>Founder & CEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Why Trust Us (Values) -->
+            <div class="mt-5 pt-5 text-center">
+                <h2 class="section-heading mb-5">Why Clients <span class="highlight">Trust Us</span></h2>
+                <div class="values-grid reveal-text">
+                    <div class="value-item">
+                        <div class="val-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Uncompromising Integrity</h4>
+                        <p>We believe in 100% transparency. No hidden costs, no surprises.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="val-icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Quality Assurance</h4>
+                        <p>Every product is inspected to meet international standards before shipping.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="val-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Speed & Agility</h4>
+                        <p>We leverage a robust logistics network for the fastest turnaround times.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="val-icon"><i class="fas fa-users"></i></div>
+                        <h4>Client-Centric</h4>
+                        <p>Your success is our success. We build relationships, not just client lists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Reach (Countries) -->
+    <section class="global-reach section-padding">
+        <div class="container">
+            <div class="reach-grid">
+                <div class="reach-content reveal-text">
+                    <h2 class="section-heading">Expanding <span class="highlight">Horizons</span></h2>
+                    <p class="mb-4">We actively trade across major international hubs.</p>
+
+                    <div class="reach-lists">
+                        <div class="list-group">
+                            <h4><i class="fas fa-plane-departure"></i> Exporting To</h4>
+                            <ul>
+                                <li>The UAE (Dubai, Abu Dhabi)</li>
+                                <li>United States (USA)</li>
+                                <li>African Nations</li>
+                                <li>Europe (UK, Germany)</li>
+                            </ul>
+                        </div>
+                        <div class="list-group">
+                            <h4><i class="fas fa-plane-arrival"></i> Importing From</h4>
+                            <ul>
+                                <li>China (Electronics, Machinery)</li>
+                                <li>Vietnam (Textiles, Agro)</li>
+                                <li>Indonesia (Raw Materials)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="reach-map reveal-image">
+                    <img src="assets/images/hero_globe.webp" alt="World Map" class="floating-globe">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand text-center">
+                <h2>HKOverseas<span class="dot">.com</span></h2>
+                <p>Connecting the World, One Shipment at a Time.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p class="copyright">© 2024 HKOverseas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home/script.js"></script>
+</body>
+
+</html>
