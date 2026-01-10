@@ -18,108 +18,82 @@ if (cursorDot && cursorOutline) {
             transform: `translate(${posX}px, ${posY}px) translate(-50%, -50%)`
         }, { duration: 500, fill: "forwards" });
     });
+
+    // Cursor Color Change Logic
+    const darkSections = document.querySelectorAll('.cta-inner'); // Add other dark selectors here if needed
+
+    darkSections.forEach(section => {
+        section.addEventListener('mouseenter', () => {
+            cursorDot.classList.add('cursor-white');
+            cursorOutline.classList.add('cursor-white');
+        });
+
+        section.addEventListener('mouseleave', () => {
+            cursorDot.classList.remove('cursor-white');
+            cursorOutline.classList.remove('cursor-white');
+        });
+    });
 }
 
-// Preloader
-document.addEventListener('DOMContentLoaded', () => {
-    const tl = gsap.timeline();
-    const progressCircle = document.querySelector('.loader-progress');
-    const percentText = document.querySelector('.loader-percent');
-
-    // Remove scrolling during load
-    document.body.style.overflow = 'hidden';
-
-    // 1. Circle & Text Animation
-    tl.to(progressCircle, {
-        strokeDashoffset: 0,
-        duration: 1.5,
-        ease: "power2.inOut"
-    })
-        .to(percentText, {
-            innerText: 100,
-            duration: 1.5,
-            snap: { innerText: 1 },
-            ease: "linear",
-            onUpdate: function () {
-                this.targets()[0].innerHTML = Math.ceil(this.targets()[0].innerText) + "%";
-            }
-        }, "<") // Start at same time as circle
-
-        // 2. Preloader Exit
-        .to('.loader-design', {
-            scale: 0.8,
-            opacity: 0,
-            duration: 0.4,
-            ease: "back.in(1.7)"
-        })
-        .to('.preloader', {
-            yPercent: -100,
-            duration: 1,
-            ease: "expo.inOut",
-            onComplete: () => {
-                document.body.style.overflow = ''; // Re-enable scroll
-            }
-        })
-
-        // 3. Hero Entrance
-        .from('.hero-bg', {
-            scale: 1.2,
-            duration: 1,
-            ease: "power2.out"
-        }, "-=0.8")
-        .from('.hero-title .word', {
-            y: '110%',
-            duration: 1,
-            stagger: 0.05,
-            ease: "power4.out"
-        }, "-=1")
-        .from('.fade-up', {
-            y: 30,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power2.out"
-        }, "-=0.8");
-});
-
 // Scroll Triggers
-// About Image Reveal
-gsap.from('.reveal-image', {
-    scrollTrigger: {
-        trigger: '#about',
-        start: 'top 80%',
-    },
-    x: -100,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
+// Generic Image Reveal
+gsap.utils.toArray('.reveal-image').forEach(img => {
+    gsap.from(img, {
+        scrollTrigger: {
+            trigger: img,
+            start: 'top 80%',
+            toggleActions: "play none none reverse"
+        },
+        x: -50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power2.out"
+    });
 });
 
-// Text Reveals
+// Generic Text Reveals
 gsap.utils.toArray('.reveal-text').forEach(text => {
     gsap.from(text, {
         scrollTrigger: {
             trigger: text,
             start: 'top 85%',
+            toggleActions: "play none none reverse"
         },
-        y: 50,
+        y: 30,
         opacity: 0,
         duration: 1,
         ease: "power2.out"
     });
 });
 
-// Service Cards Stagger
-gsap.from('.service-card', {
-    scrollTrigger: {
-        trigger: '#services',
-        start: 'top 75%'
-    },
-    y: 100,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.8,
-    ease: "power2.out"
+// Stagger Animations for various grids
+const staggerGroups = [
+    { container: '.grid-3', item: '.service-card' },
+    { container: '.values-grid', item: '.value-item' },
+    { container: '.export-services-grid', item: '.export-service-card' },
+    { container: '.reach-grid-modern', item: '.reach-card' },
+    { container: '.product-grid', item: '.product-card' }
+];
+
+staggerGroups.forEach(group => {
+    const containers = document.querySelectorAll(group.container);
+    containers.forEach(container => {
+        const items = container.querySelectorAll(group.item);
+        if (items.length > 0) {
+            gsap.from(items, {
+                scrollTrigger: {
+                    trigger: container,
+                    start: 'top 75%',
+                    toggleActions: "play none none reverse"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power2.out"
+            });
+        }
+    });
 });
 
 // Stats Counter
@@ -207,3 +181,37 @@ if (menuToggle && navMenu) {
         });
     });
 }
+
+// Product Filtering Logic
+const filterBtns = document.querySelectorAll('.cat-btn');
+const productItems = document.querySelectorAll('.product-item-wrapper');
+
+if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active to clicked
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            productItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+
+                if (filterValue === 'all' || filterValue === itemCategory) {
+                    item.classList.remove('hide');
+                    // Add animation here if desired using GSAP
+                    gsap.fromTo(item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
+                } else {
+                    item.classList.add('hide');
+                }
+            });
+
+            // Re-trigger scrolllayout refresh if needed
+            ScrollTrigger.refresh();
+        });
+    });
+}
+
+

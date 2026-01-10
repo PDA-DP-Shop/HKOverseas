@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our diverse range of export products including Handicrafts and Dresses. Top quality from HKOverseas.">
+    <title>Products | HKOverseas</title>
+    <link rel="stylesheet" href="home/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo mobile-text-sm" style="cursor: none;">HKOverseas<span
+                    class="dot">.com</span></a>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link mobile-text-sm" style="cursor: none;">Home</a></li>
+                <li><a href="about.html" class="nav-link mobile-text-sm" style="cursor: none;">About Us</a></li>
+                <li><a href="#products" class="nav-link active mobile-text-sm" style="cursor: none;">Products</a>
+                </li>
+                <li><a href="details.html" class="nav-link mobile-text-sm" style="cursor: none;">Details</a></li>
+                <li><a href="contact.html" class="btn-nav mobile-text-sm" style="cursor: none;">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <div class="badge-pill fade-up mobile-text-sm">Global Showcase</div>
+            <h1 class="hero-title fade-up">Premium <span class="highlight">Collection</span></h1>
+            <p class="hero-desc mx-auto fade-up mobile-text-xs">Curated collection of India's finest Handicrafts and
+                Textiles.</p>
+        </div>
+    </section>
+
+    <!-- Category Filter & Products -->
+    <section class="section-padding bg-surface" style="margin: 10px; border-radius: 30px;">
+        <div class="container">
+
+            <!-- Category Buttons -->
+            <div class="category-filter reveal-text">
+                <button class="cat-btn active mobile-text-xs" data-filter="all">All</button>
+                <button class="cat-btn mobile-text-xs" data-filter="handicraft">Handicraft</button>
+                <button class="cat-btn mobile-text-xs" data-filter="dress">Dress & Textile</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid reveal-text" id="productGrid">
+
+                <!-- Handicraft Items (10) -->
+                <!-- 1 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_wood.png" alt="Wooden Elephant" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Carved Wooden Elephant</h3>
+                            <p class="pc-desc mobile-text-xs">Intricately hand-carved wooden elephant statue, a symbol
+                                of royal Indian heritage.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_brass.png" alt="Brass Vase" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Antique Brass Vase</h3>
+                            <p class="pc-desc mobile-text-xs">Elegant brass vase with traditional engravings, perfect
+                                for home decor.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_wood.png" alt="Wooden Box" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Rosewood Jewelry Box</h3>
+                            <p class="pc-desc mobile-text-xs">Premium rosewood box with brass inlay work, ideal for
+                                storing valuables.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_brass.png" alt="Brass Idol" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Brass Ganesha Idol</h3>
+                            <p class="pc-desc mobile-text-xs">Solid brass idol of Lord Ganesha, crafted with fine
+                                detailing and polish.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_wood.png" alt="Wall Panel" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Decorative Wall Panel</h3>
+                            <p class="pc-desc mobile-text-xs">Hand-carved wooden wall panel showcasing traditional
+                                floral motifs.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_brass.png" alt="Brass Lamp" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Traditional Oil Lamp</h3>
+                            <p class="pc-desc mobile-text-xs">Authentic brass Diya lamp, widely used for festivals and
+                                auspicious occasions.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_wood.png" alt="Wooden Coasters" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Hand Painted Coasters</h3>
+                            <p class="pc-desc mobile-text-xs">Set of 6 wooden coasters featuring vibrant Warli tribal
+                                art painting.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_brass.png" alt="Singing Bowl" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Tibetan Singing Bowl</h3>
+                            <p class="pc-desc mobile-text-xs">Hand-beaten brass singing bowl for meditation and sound
+                                therapy.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_wood.png" alt="Wooden Tray" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Serving Tray Set</h3>
+                            <p class="pc-desc mobile-text-xs">Elegant wooden serving trays with mother-of-pearl inlay
+                                work.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="product-item-wrapper" data-category="handicraft">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/handicraft_brass.png" alt="Candle Holder" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Handicraft</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Brass Candle Holder</h3>
+                            <p class="pc-desc mobile-text-xs">Vintage style brass candle holder, adding a rustic charm
+                                to any dining table.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dress Items (10) -->
+                <!-- 11 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_saree.png" alt="Banarasi Saree" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Banarasi Silk Saree</h3>
+                            <p class="pc-desc mobile-text-xs">Luxurious red silk saree with gold zari border, perfect
+                                for weddings.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 12 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_kurti.png" alt="Embroidered Kurti" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Phulkari Embroidered Kurti</h3>
+                            <p class="pc-desc mobile-text-xs">Cotton kurti featuring colorful Phulkari hand embroidery
+                                from Punjab.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 13 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_saree.png" alt="Chiffon Saree" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Printed Chiffon Saree</h3>
+                            <p class="pc-desc mobile-text-xs">Lightweight chiffon saree with modern digital prints for
+                                casual wear.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 14 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_kurti.png" alt="Anarkali Suit" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Floor Length Anarkali</h3>
+                            <p class="pc-desc mobile-text-xs">Elegant floor-length Anarkali suit with delicate sequin
+                                work.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_saree.png" alt="Cotton Saree" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Handloom Cotton Saree</h3>
+                            <p class="pc-desc mobile-text-xs">Pure handloom cotton saree, breathable and comfortable for
+                                daily use.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 16 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_kurti.png" alt="Palazzo Set" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Kurta Palazzo Set</h3>
+                            <p class="pc-desc mobile-text-xs">Trendy straight cut kurta paired with matching palazzo
+                                pants.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 17 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_saree.png" alt="Kanjivaram Saree" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Kanjivaram Silk Saree</h3>
+                            <p class="pc-desc mobile-text-xs">South India's famous Kanjivaram silk saree with temple
+                                border design.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 18 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_kurti.png" alt="Short Tunic" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Cotton Short Tunic</h3>
+                            <p class="pc-desc mobile-text-xs">indo-western style short tunic top to be worn with jeans.
+                            </p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 19 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_saree.png" alt="Georgette Saree" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Embroidered Georgette Saree</h3>
+                            <p class="pc-desc mobile-text-xs">Fluid georgette fabric saree with heavy border embroidery.
+                            </p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 20 -->
+                <div class="product-item-wrapper" data-category="dress">
+                    <div class="product-card-enhanced">
+                        <div class="pc-img-wrapper">
+                            <img src="assets/images/dress_kurti.png" alt="Lehenga Choli" loading="lazy">
+                            <div class="pc-category-tag mobile-text-xs">Dress</div>
+                        </div>
+                        <div class="pc-content">
+                            <h3>Festive Lehenga Choli</h3>
+                            <p class="pc-desc mobile-text-xs">Semi-stitched lehenga choli set with dupatta for festive
+                                occasions.</p>
+                            <a href="contact.html" class="pc-btn mobile-text-xs">Inquire Now <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand text-center">
+                <h2>HKOverseas<span class="dot">.com</span></h2>
+                <p>Connecting the World, One Shipment at a Time.</p>
+                <div class="socials">
+                </div>
+                <p class="copyright mobile-text-xs mobile-text-xs">© 2024 HKOverseas. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+/* --- Custom Dropdown Styles --- */
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+}
+
+.custom-select-wrapper select {
+    display: none;
+    /* Hide native select */
+}
+
+.custom-select-trigger {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background: #f8f9fa;
+    /* Match input bg */
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-select-trigger:hover {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.custom-select-wrapper.open .custom-select-trigger {
+    border-color: var(--primary);
+    background: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 2px solid var(--primary);
+    border-top: 0;
+    background: #fff;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 100;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    transform: translateY(-10px);
+}
+
+.custom-select-wrapper.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-option:hover {
+    background-color: var(--background);
+    color: var(--primary);
+    padding-left: 1.8rem;
+    /* Slight slide effect */
+}
+
+.custom-option.selected {
+    color: var(--primary);
+    background-color: rgba(var(--primary-rgb), 0.05);
+    font-weight: 700;
+}
+
+.custom-select-trigger i {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.custom-select-wrapper.open .custom-select-trigger i {
+    transform: rotate(180deg);
+    color: var(--primary);
+}
+
+/* Placeholder styling */
+.custom-select-trigger.placeholder-active span {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+/* --- Typewriter Effect --- */
+.typewriter-cursor {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 300;
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- Contact Page Overrides for Centered Form (Added Step 428) --- */
+.contact-container {
+    flex-direction: column !important;
+    /* Force column layout to stack/center */
+    align-items: center;
+    /* Center items */
+    max-width: 800px;
+    /* Limit width */
+    margin: -50px auto 0 auto;
+    /* Center horizontally + negative top margin preserved */
+    text-align: center;
+    /* Optional: Ensure border/shadow looks good on just one box */
+    /* border: 1px solid rgba(0,0,0,0.05); (already in base but useful to note) */
+}
+
+.contact-form-side {
+    width: 100%;
+    padding: 3rem 2rem;
+    /* Add more padding for space */
+}
+
+/* Form Styling Update */
+.contact-form-side form {
+    text-align: left;
+    max-width: 600px;
+    /* Constrain form width so it doesn't stretch too wide */
+    margin: 0 auto;
+    /* Center the form itself */
+}
+
+/* Centered Header if present */
+.contact-form-side h2 {
+    text-align: center;
+}
+
+/* --- Multi-Select Button Styles --- */
+.selection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.select-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    color: var(--text-muted);
+    border-radius: 50px;
+    /* Pill shape */
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.select-btn:hover {
+    background: #fff;
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.select-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
