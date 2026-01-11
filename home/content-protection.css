@@ -1,0 +1,239 @@
+/* ==============================================
+   AGGRESSIVE CONTENT PROTECTION STYLES
+   ============================================== */
+
+/* 1. Global Select Disable */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    /* iOS Safari */
+    -webkit-user-drag: none !important;
+    user-drag: none !important;
+}
+
+/* Allow selection in forms only */
+input,
+textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+}
+
+/* 2. Image Protection Shield */
+img {
+    pointer-events: none !important;
+    /* Cannot click or hover */
+    -webkit-user-drag: none !important;
+}
+
+/* 3. Print Protection */
+@media print {
+
+    html,
+    body {
+        display: none !important;
+        /* Hides everything */
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    * {
+        color: transparent !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body:after {
+        content: "Printing is disabled directly. Please contact HKOverseas for official documents.";
+        display: block !important;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: red !important;
+        font-size: 24pt !important;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+/* 4. Secure Alert Box */
+.secure-alert {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    /* Hidden */
+    background: #e74c3c;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2147483647;
+    /* Max Z-Index */
+    transition: right 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.secure-alert.visible {
+    right: 20px;
+}
+
+/* 5. INSTANT BLACKOUT OVERLAY */
+#aggressive-blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 2147483647;
+    /* Max Z-Index */
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    pointer-events: none;
+    will-change: display;
+    /* Hardware acceleration hint */
+}
+
+#aggressive-blackout.active {
+    display: flex !important;
+    pointer-events: all !important;
+}
+
+/* 6. STRICT CONTENT PROTECTION */
+html {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+/* Force unselectable on everything */
+*,
+*:before,
+*:after {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+}
+
+/* Allow inputs only */
+input,
+textarea {
+    -webkit-user-select: text !important;
+    user-select: text !important;
+}
+
+/* Hide scrollbar when blocked */
+body.blocked {
+    overflow: hidden !important;
+}
+
+@media print {
+    html {
+        background: #000 !important;
+        display: none !important;
+    }
+}
+
+/* Disable Context Menu Highlights */
+body {
+    -webkit-tap-highlight-color: transparent;
+}
